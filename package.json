@@ -1,0 +1,13 @@
+{
+  "name": "aws-cloudfront-lambda-function-associations-version-bump-action",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "scripts": {
+    "prepare": "ncc build ./src/index.js -o dist --source-map --license licenses.txt"
+  },
+  "dependencies": {
+    "@actions/core": "^1.7.0",
+    "@vercel/ncc": "^0.33.4",
+    "aws-sdk": "^2.1122.0"
+  }
+}

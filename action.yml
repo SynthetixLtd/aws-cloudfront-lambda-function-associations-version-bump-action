@@ -1,0 +1,19 @@
+name: github-actions-aws-cloudfront-lambda-function-associations-version-bump
+description: 'Increments the lambda function ARN which is associatied with the targeted CloudFront distribution event type'
+author: 'Synthetix <support@synthetix.com>'
+
+inputs:
+  DISTRIBUTION_ID:
+    description: 'AWS CloudFront Distribution ID'
+    required: true
+  ACCESS_KEY_ID:
+    required: true
+  SECRET_ACCESS_KEY:
+    required: true
+  EVENT_TYPE:
+    description: 'AWS CloudFront function association event type [viewer-request, origin-request, origin-response, viewer-response]'
+    required: true
+
+runs:
+  using: 'node14'
+  main: 'dist/index.js'
